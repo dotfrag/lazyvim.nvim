@@ -2,8 +2,8 @@ return {
   "Wansmer/treesj",
   keys = {
     { "<leader>m", "<cmd>TSJToggle<cr>", desc = "Node Toggle" },
-    { "<leader>gzs", "<cmd>TSJSplit<cr>", desc = "Node Split" },
-    { "<leader>gzj", "<cmd>TSJJoin<cr>", desc = "Node Join" },
+    { "gzs", "<cmd>TSJSplit<cr>", desc = "Node Split" },
+    { "gzj", "<cmd>TSJJoin<cr>", desc = "Node Join" },
   },
   cmd = {
     "TSJToggle",
