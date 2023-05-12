@@ -7,6 +7,8 @@
 -- vim.keymap.set("i", "<C-k>", "<Up>")
 -- vim.keymap.set("i", "<C-l>", "<Right>")
 
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste" })
+
 vim.keymap.set("n", "<leader>d", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
