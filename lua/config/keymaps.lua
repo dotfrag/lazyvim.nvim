@@ -14,3 +14,5 @@ vim.keymap.set("n", "<leader>d", function()
 end, { desc = "Delete Buffer" })
 
 vim.keymap.set("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
+
+vim.keymap.set("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting" })
