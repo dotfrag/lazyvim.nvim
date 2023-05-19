@@ -11,4 +11,4 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldenable = false
 
 -- indent-blankline current context highlight
-cmd([[highlight IndentBlanklineContextStart guibg=#2d3f76]])
+cmd([[highlight IndentBlanklineContextStart guibg=#363c58]])
