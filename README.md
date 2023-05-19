@@ -1,5 +1,7 @@
 # 💤 LazyVim
 
+<https://www.lazyvim.org/>
+
 ## Sources and references
 
 [AstroNvim](https://astronvim.com/)
