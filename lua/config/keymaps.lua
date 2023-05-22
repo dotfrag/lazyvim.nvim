@@ -2,17 +2,19 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- vim.keymap.set("i", "<C-h>", "<Left>")
--- vim.keymap.set("i", "<C-j>", "<Down>")
--- vim.keymap.set("i", "<C-k>", "<Up>")
--- vim.keymap.set("i", "<C-l>", "<Right>")
+local map = vim.keymap.set
 
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste" })
+map("n", "cae", "ggcG", { desc = "Entire buffer" }) -- change entire bufer
+map("n", "dae", "ggdG", { desc = "Entire buffer" }) -- delete entire bufer
+map("n", "vae", "ggVG", { desc = "Entire buffer" }) -- visual entire buffer
+map("n", "diL", "0d$", { desc = "Line" }) -- delete inside line
 
-vim.keymap.set("n", "<leader>d", function()
+map("x", "<leader>p", [["_dP]], { desc = "Paste" })
+
+map("n", "<leader>d", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
 
-vim.keymap.set("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
+map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
 
-vim.keymap.set("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting" })
+map("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting" })
