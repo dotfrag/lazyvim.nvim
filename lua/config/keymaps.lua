@@ -4,12 +4,14 @@
 
 local map = vim.keymap.set
 
-map("n", "cae", "ggcG", { desc = "Entire buffer" }) -- change entire bufer
-map("n", "dae", "ggdG", { desc = "Entire buffer" }) -- delete entire bufer
-map("n", "vae", "ggVG", { desc = "Entire buffer" }) -- visual entire buffer
-map("n", "diL", "0d$", { desc = "Line" }) -- delete inside line
+-- Motion commands
+map("n", "cae", "ggcG", { desc = "Entire buffer" })
+map("n", "dae", "ggdG", { desc = "Entire buffer" })
+map("n", "vae", "ggVG", { desc = "Entire buffer" })
+map("n", "diL", "0d$", { desc = "Line" })
+map("n", "viL", "0v$h", { desc = "Line" })
 
--- Paste without losing primary clipboard
+-- Paste without losing clipboard contents
 map("x", "<leader>p", [["_dP]], { desc = "Paste" })
 
 -- Buffer delete
