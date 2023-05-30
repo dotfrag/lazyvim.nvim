@@ -1,6 +1,6 @@
 # 💤 LazyVim
 
-<https://www.lazyvim.org/>
+Custom [LazyVim](https://www.lazyvim.org/) config based on the [starter template](https://github.com/LazyVim/starter).
 
 ## Sources and references
 
