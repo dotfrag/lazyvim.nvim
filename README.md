@@ -12,4 +12,6 @@
 
 [NvChad](https://nvchad.com/)
 
+[ThePrimeagen](https://github.com/ThePrimeagen/init.lua)
+
 [Josean Martinez](https://github.com/josean-dev/dev-environment-files/tree/main/.config/nvim)
