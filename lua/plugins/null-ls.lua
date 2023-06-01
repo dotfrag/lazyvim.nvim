@@ -8,6 +8,9 @@ return {
 
       -- python
       nls.builtins.formatting.black,
+
+      -- markdown
+      nls.builtins.diagnostics.markdownlint,
     })
   end,
 }
