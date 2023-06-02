@@ -8,8 +8,10 @@ local map = vim.keymap.set
 map("n", "cae", "ggcG", { desc = "Entire buffer" })
 map("n", "dae", "ggdG", { desc = "Entire buffer" })
 map("n", "vae", "ggVG", { desc = "Entire buffer" })
+map("n", "yae", "ggyG", { desc = "Entire buffer" })
 map("n", "diL", "0d$", { desc = "Line" })
 map("n", "viL", "0v$h", { desc = "Line" })
+map("n", "yiL", "0v$hy", { desc = "Line" })
 
 -- Paste without losing clipboard contents
 map("x", "<leader>p", [["_dP]], { desc = "Paste" })
