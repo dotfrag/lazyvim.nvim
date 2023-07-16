@@ -6,9 +6,6 @@ return {
       -- bash
       nls.builtins.formatting.shfmt.with({ extra_args = { "-i", "2", "-ci" } }),
 
-      -- python
-      nls.builtins.formatting.black,
-
       -- markdown
       nls.builtins.diagnostics.markdownlint,
     })

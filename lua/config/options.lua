@@ -8,6 +8,9 @@ local cmd = vim.cmd
 -- Set window title
 opt.title = true
 
+-- Disable cursor line
+opt.cursorline = false
+
 -- Enable treesitter folding and disable folding at startup
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
