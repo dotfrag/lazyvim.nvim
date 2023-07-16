@@ -5,6 +5,9 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
+-- Set window title
+opt.title = true
+
 -- Enable treesitter folding and disable folding at startup
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
