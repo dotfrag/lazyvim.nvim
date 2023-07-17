@@ -3,7 +3,7 @@ return {
   opts = {
     auto_install = true,
     highlight = {
-      disable = { "ini" },
+      disable = { "diff", "ini" },
     },
   },
 }
