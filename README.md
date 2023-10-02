@@ -6,6 +6,8 @@ Custom [LazyVim](https://www.lazyvim.org/) config based on the [starter template
 
 [AstroNvim](https://astronvim.com/)
 
+[Kickstart](https://github.com/nvim-lua/kickstart.nvim)
+
 [LazyVim](https://www.lazyvim.org/)
 
 [LunarVim](https://www.lunarvim.org/)
