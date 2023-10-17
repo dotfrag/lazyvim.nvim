@@ -3,7 +3,7 @@ return {
   opts = {
     formatters = {
       shfmt = {
-        extra_args = { "-i", "2", "-ci" },
+        prepend_args = { "-i", "2", "-ci" },
       },
     },
   },
