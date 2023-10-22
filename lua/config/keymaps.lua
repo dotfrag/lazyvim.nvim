@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
+local Util = require("lazyvim.util")
 
 -- Motion commands
 map("n", "cae", "ggcG", { desc = "Entire buffer" })
@@ -21,11 +22,19 @@ map("n", "<leader>d", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
 
--- NOTE: Not really needed.
--- -- Toggle explorer
--- map("n", "<C-n>", function()
---   require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").root.get() })
--- end, { desc = "Toggle Explorer" })
+-- More comfortable keys for searching history in command line
+-- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
+map("c", "<C-j>", "<Down>", { desc = "Next command" })
+map("c", "<C-k>", "<Up>", { desc = "Previous command" })
+
+-- Lazygit full window size
+-- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
+map("n", "<leader>gg", function()
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+end, { desc = "Lazygit (root dir)" })
+map("n", "<leader>gG", function()
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+end, { desc = "Lazygit (cwd dir)" })
 
 -- Noice telescope
 map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })

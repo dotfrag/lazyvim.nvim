@@ -1,12 +1,12 @@
 return {
   {
     "echasnovski/mini.splitjoin",
-    event = "VeryLazy",
+    event = "LazyFile",
     config = true,
   },
   {
     "echasnovski/mini.align",
-    event = "VeryLazy",
+    event = "LazyFile",
     config = true,
   },
 }
