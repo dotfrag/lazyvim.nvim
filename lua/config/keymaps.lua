@@ -21,10 +21,11 @@ map("n", "<leader>d", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
 
--- Toggle explorer
-map("n", "<C-n>", function()
-  require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-end, { desc = "Toggle Explorer" })
+-- NOTE: Not really needed.
+-- -- Toggle explorer
+-- map("n", "<C-n>", function()
+--   require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").root.get() })
+-- end, { desc = "Toggle Explorer" })
 
 -- Noice telescope
 map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })

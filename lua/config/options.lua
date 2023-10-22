@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 local opt = vim.opt
-local cmd = vim.cmd
+-- local cmd = vim.cmd
 
 -- Set window title
 opt.title = true
@@ -11,10 +11,12 @@ opt.title = true
 -- Disable cursor line
 opt.cursorline = false
 
--- Enable treesitter folding and disable folding at startup
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldenable = false
+-- NOTE: LazyVim now supports this (in v10?)
+-- -- Enable treesitter folding and disable folding at startup
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldenable = false
 
--- indent-blankline current context highlight
-cmd([[highlight IndentBlanklineContextStart guibg=#363c58]])
+-- NOTE: LazyVim added ts-context
+-- -- indent-blankline current context highlight
+-- cmd([[highlight IndentBlanklineContextStart guibg=#363c58]])
