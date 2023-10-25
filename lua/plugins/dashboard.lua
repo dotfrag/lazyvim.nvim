@@ -7,6 +7,7 @@ return {
       desc = " Explorer",
       icon = " ",
       key = "e",
+      key_format = "  %s",
     }
     table.insert(opts.config.center, 3, explorer)
   end,
