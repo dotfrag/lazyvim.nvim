@@ -7,8 +7,11 @@ return {
       desc = " Explorer",
       icon = " ",
       key = "e",
-      key_format = "  %s",
     }
+
+    explorer.desc = explorer.desc .. string.rep(" ", 43 - #explorer.desc)
+    explorer.key_format = "  %s"
+
     table.insert(opts.config.center, 3, explorer)
   end,
 }
