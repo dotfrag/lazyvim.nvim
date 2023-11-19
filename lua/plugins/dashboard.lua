@@ -8,10 +8,19 @@ return {
       icon = " ",
       key = "e",
     }
-
     explorer.desc = explorer.desc .. string.rep(" ", 43 - #explorer.desc)
     explorer.key_format = "  %s"
 
+    local restore_last_session = {
+      action = 'lua require("persistence").load({ last = true })',
+      desc = " Restore Last Session",
+      icon = "󰦛 ",
+      key = "S",
+    }
+    restore_last_session.desc = restore_last_session.desc .. string.rep(" ", 43 - #restore_last_session.desc)
+    restore_last_session.key_format = "  %s"
+
     table.insert(opts.config.center, 3, explorer)
+    table.insert(opts.config.center, 9, restore_last_session)
   end,
 }
