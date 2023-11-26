@@ -12,11 +12,7 @@ opt.title = true
 opt.cursorline = false
 
 -- NOTE: LazyVim now supports this (in v10?)
--- -- Enable treesitter folding and disable folding at startup
--- opt.foldmethod = "expr"
--- opt.foldexpr = "nvim_treesitter#foldexpr()"
--- opt.foldenable = false
-
--- NOTE: LazyVim added ts-context
--- -- indent-blankline current context highlight
--- cmd([[highlight IndentBlanklineContextStart guibg=#363c58]])
+-- Enable treesitter folding and disable folding at startup
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
