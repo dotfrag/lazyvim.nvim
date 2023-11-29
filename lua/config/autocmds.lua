@@ -3,6 +3,12 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  desc = "markdown set textwidth to 80",
+  command = "setlocal textwidth=80",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
   pattern = { "kotlin" },
   desc = "kotlin commentstring configuration",
   command = "setlocal commentstring=//\\ %s",
