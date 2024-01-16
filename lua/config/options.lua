@@ -16,3 +16,8 @@ opt.cursorline = false
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldenable = false
+
+-- Filetypes
+vim.filetype.add({
+  extension = { http = "http" },
+})
