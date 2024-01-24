@@ -11,7 +11,10 @@ return {
     {
       "<leader>fL",
       function()
-        require("telescope.builtin").live_grep({ cwd = require("lazy.core.config").options.root .. "/LazyVim" })
+        require("telescope.builtin").live_grep({
+          cwd = require("lazy.core.config").options.root .. "/LazyVim",
+          glob_pattern = "*.lua",
+        })
       end,
       desc = "Grep Plugin Files",
     },
