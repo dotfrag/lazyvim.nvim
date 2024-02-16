@@ -43,3 +43,8 @@ map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
 
 -- Save without formatting
 map("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting" })
+
+-- Open new terminal window
+map("n", "<leader>n", function()
+  vim.fn.jobstart({ "kitty", "-d", Util.root.get() })
+end, { desc = "Open new terminal window" })
