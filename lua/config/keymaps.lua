@@ -30,11 +30,13 @@ map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 -- Lazygit full window size
 -- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
 map("n", "<leader>gg", function()
-  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+  -- Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+  vim.fn.jobstart({ "kitty", "-d", Util.root.get(), "lazygit" })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
-end, { desc = "Lazygit (cwd dir)" })
+  -- Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+end, { desc = "Lazygit (root dir)" })
 
 -- Noice telescope
 map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
