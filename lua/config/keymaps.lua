@@ -3,13 +3,12 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
-local Util = require("lazyvim.util")
 
 -- Motion commands
-map("n", "cae", "ggcG", { desc = "Entire buffer" })
-map("n", "dae", "ggdG", { desc = "Entire buffer" })
-map("n", "vae", "ggVG", { desc = "Entire buffer" })
-map("n", "yae", "ggyG", { desc = "Entire buffer" })
+-- map("n", "cae", "ggcG", { desc = "Entire buffer" })
+-- map("n", "dae", "ggdG", { desc = "Entire buffer" })
+-- map("n", "vae", "ggVG", { desc = "Entire buffer" })
+-- map("n", "yae", "ggyG", { desc = "Entire buffer" })
 map("n", "diL", "0d$", { desc = "Line" })
 map("n", "viL", "0v$h", { desc = "Line" })
 map("n", "yiL", "0v$hy", { desc = "Line" })
@@ -30,12 +29,12 @@ map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 -- Lazygit full window size
 -- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
 map("n", "<leader>gg", function()
-  -- Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
-  vim.fn.jobstart({ "kitty", "-d", Util.root.get(), "lazygit" })
+  -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
+  vim.fn.jobstart({ "kitty", "-d", LazyVim.root.get(), "lazygit" })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  -- Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
-  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+  -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+  LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
 end, { desc = "Lazygit (root dir)" })
 
 -- Noice telescope
@@ -46,5 +45,5 @@ map("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting"
 
 -- Open new terminal window
 map("n", "<leader>n", function()
-  vim.fn.jobstart({ "kitty", "-d", Util.root.get() })
+  vim.fn.jobstart({ "kitty", "-d", LazyVim.root.get() })
 end, { desc = "Open new terminal window" })
