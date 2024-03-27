@@ -26,16 +26,24 @@ end, { desc = "Delete Buffer" })
 map("c", "<C-j>", "<Down>", { desc = "Next command" })
 map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 
--- Lazygit full window size
--- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
-map("n", "<leader>gg", function()
-  -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
-  vim.fn.jobstart({ "kitty", "-d", LazyVim.root.get(), "lazygit" })
-end, { desc = "Lazygit (root dir)" })
-map("n", "<leader>gG", function()
-  -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
-  LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
-end, { desc = "Lazygit (root dir)" })
+-- Regex
+map("n", "<leader>ra", "/[^\\x00-\\x7F]<cr>", { desc = "Find Non-ASCII Characters" })
+map("n", "<leader>rb", "<cmd>s/ /\\r/g<cr>|<cmd>noh<cr>", { desc = "Break Line" })
+map("n", "<leader>rc", "<cmd>:%s/[[:cntrl:]]//<cr>``", { desc = "Remove Control Symbols" })
+map("n", "<leader>rp", "<cmd>:%s/[^[:print:]]//<cr>``", { desc = "Remove Non-Printable Characters" })
+map("n", "<leader>rt", "<cmd>:%s/\\s\\+$//<cr>``", { desc = "Remove Trailing Whitespace" })
+map("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace Word" })
+
+-- -- Lazygit full window size
+-- -- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/config/keymaps.lua
+-- map("n", "<leader>gg", function()
+--   -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
+--   vim.fn.jobstart({ "kitty", "-d", LazyVim.root.get(), "lazygit" })
+-- end, { desc = "Lazygit (root dir)" })
+-- map("n", "<leader>gG", function()
+--   -- LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+--   LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = LazyVim.root.get() })
+-- end, { desc = "Lazygit (root dir)" })
 
 -- Noice telescope
 map("n", "<leader>snt", "<cmd>NoiceTelescope<cr>", { desc = "Noice Telescope" })
